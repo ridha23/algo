@@ -1,0 +1,49 @@
+//At this checkpoint, you are asked to write an algorithm 
+//that read a sentence, which ends with a point, character by character, and to determine:
+
+// je suis un robot.
+
+////////// 1 -- The length of the sentence (the number of characters)
+
+VAR sentence : STRING; // insert the sentence into variable de type string
+VAR sent_length : INTEGER; // creat a var to get the sentence length
+BEGIN
+
+sent_length := sentence.length
+// fing the length of the sentence and insert it into variable de type number
+Write(sent_length) 
+//show the sentence length to the user
+END  
+
+
+////////// 2 -- The number of words in the sentence (assuming that the words are separated by a single space).
+
+VAR array_sentence : ARRAY_OF STRING[sent_length];
+VAR i : INTEGER; 
+
+BEGIN
+array_sentence := sentence;  
+// insert the sentence into array
+FOR i FROM 0 TO sent_length STEP step  DO
+    if (i= " "){
+        i=i++;
+        // count the number of space
+    }
+    Write('the number of words is :' i+1 ) 
+    //show the number  of words to the user
+END_FOR
+
+////////// 3 --  The number of vowels in the sentence.
+
+VAR j :INTEGER; 
+
+BEGIN
+FOR j FROM 0 TO sent_length STEP step  DO
+    if (j= "a" OR j= "e" OR j= "u" OR j= "I" OR j= "o" OR j= "y"){
+        j=j++;
+        // count the number of voyels
+    }
+    Write('the number of voyels is :' j ) 
+    //show the number  of vowels to the user
+END_FOR
+
