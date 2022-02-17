@@ -1,0 +1,23 @@
+ALGORITHM checkpoint
+
+//Set 1: [12, 13, 6, 10]
+//Set 2: [13, 10, 16, 15]
+
+VAR
+    set1, set2 : array of INTEGER[20]
+    i, j , sum : INTEGER:=0
+
+
+BEGIN
+    FOR i FROM 0 TO set1.length   DO
+        FOR j FROM 0 TO set2.length   DO
+            IF (set1[i]=set2[i])  THEN
+                sum = sum + (set[i] + set[j])  // pas de break car on a besoin de la somme totale a la fin  
+                j=j++  
+            ELSE
+                 j=j++   //incrementation de j+1 pour passer a la valeur suivante du tableay set2
+            END_IF
+        END_FOR 
+            i=i++  //incrementation de j+1 pour passer a la valeur suivante du tableay set1
+    END_FOR
+END
