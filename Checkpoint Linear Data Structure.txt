@@ -9,8 +9,8 @@ VAR
 
 
 BEGIN
-    FOR i FROM 0 TO set1.length   DO
-        FOR j FROM 0 TO set2.length   DO
+    FOR i FROM 0 TO set1.length -1   DO
+        FOR j FROM 0 TO set2.length -1   DO
             IF (set1[i]=set2[i])  THEN
                 sum = sum + (set[i] + set[j])  // pas de break car on a besoin de la somme totale a la fin  
                 j=j++  
