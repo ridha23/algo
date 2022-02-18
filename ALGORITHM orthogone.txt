@@ -1,0 +1,24 @@
+ALGORITHM orth_vectors
+VAR
+   v1, v2 :  ARRAY_OF INTEGER[50];
+   dot :INTEGER;
+BEGIN
+    dot_product (v1, v2, var dot);
+    IF (dot = 0) THEN
+                write ("v1 and v2 are orth");
+    ELSE
+        write ("v1 and v2 are not orth");
+    END_IF     
+END
+
+
+
+PROCEDURE dot_product(v1, v2 :  ARRAY_OF INTEGER[50], var dot :INTEGER )
+VAR
+BEGIN
+    dot := 0;
+    FOR i FROM 0 TO v1.length-1 DO
+        dot := dot + ( v1[i] * v2[i] )
+    END_FOR
+
+END
