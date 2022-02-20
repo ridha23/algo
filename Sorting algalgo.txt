@@ -1,0 +1,28 @@
+//Insertion sort is a simple sorting algorithm 
+//that works the way we sort playing cards in our hands. 
+//Each time we take a new card we put it in the right place in our hand. 
+
+//Each time work only with the first i-1 element from of the array
+//Pick element arr[i] and insert it into sorted sequence in the array from 0 to i-1.
+
+
+
+
+PROCEDURE hand_card(VAR tab : ARRAY_OF INTEGER, card: INTEGER)
+VAR
+   i,j,n,m : INTEGER;
+BEGIN
+   n := tab.length;
+   tab[n] := card;
+    m := tab.length;
+
+   FOR i FROM 0 TO m DO
+      FOR J FROM 1 TO m  DO
+           IF (tab[i] > tab[j] ) THEN
+               tab[i] = tab[j];
+           END_IF
+      END_FOR 
+   END_FOR
+END
+
+  
